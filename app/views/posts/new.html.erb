@@ -3,3 +3,9 @@
   <%= form.text_field :content %>
   <%= form.submit "投稿する" %>
   <% end %>
+
+
+  <%= form_with url:"/posts", method: :get, local: true do |f|%>
+    <%= f.text_field :cotent %>
+    <%= f.submit "投稿する" %>
+  <% end %>
